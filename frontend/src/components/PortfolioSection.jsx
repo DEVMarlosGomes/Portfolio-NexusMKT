@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Filter } from 'lucide-react';
 import { projects, categories } from '../data/mock';
 import ProjectModal from './ProjectModal';
 
@@ -12,142 +11,69 @@ const PortfolioSection = () => {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-24 lg:py-32 bg-secondary/30 relative">
-      {/* Background Elements */}
-      <div className="absolute right-0 top-0 w-1/2 h-96 bg-primary/5 blur-3xl" />
-
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+    <section id="portfolio" className="py-16 lg:py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-12 h-px bg-primary" />
-            <span 
-              className="text-primary text-sm font-medium uppercase tracking-widest"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              Portfólio
-            </span>
-            <div className="w-12 h-px bg-primary" />
-          </div>
-          
+        <div className="text-center mb-12">
           <h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground uppercase leading-tight"
+            className="text-4xl md:text-5xl font-black text-foreground uppercase mb-4"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
-            Projetos por <span className="text-primary">Cliente</span>
+            Portfólio
           </h2>
-          
-          <p 
-            className="text-muted-foreground text-lg mt-6 max-w-2xl mx-auto"
-            style={{ fontFamily: 'Inter, sans-serif' }}
-          >
-            Conheça alguns dos projetos de identidade visual e marketing que desenvolvemos. 
-            Cada trabalho é construído em parceria com nossos clientes.
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+            Conheça nossos projetos de identidade visual e marketing
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <div className="flex items-center gap-2 mr-4">
-            <Filter size={18} className="text-muted-foreground" />
-            <span 
-              className="text-muted-foreground text-sm uppercase tracking-wide"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              Filtrar:
-            </span>
-          </div>
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-5 py-2 rounded-full text-sm font-medium uppercase tracking-wide transition-all ${
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                 activeCategory === category
                   ? 'bg-primary text-primary-foreground'
-                  : 'bg-card text-muted-foreground hover:text-foreground border border-border hover:border-primary/50'
+                  : 'bg-secondary text-muted-foreground hover:text-foreground'
               }`}
-              style={{ fontFamily: 'Inter, sans-serif' }}
             >
               {category}
             </button>
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project, index) => (
+        {/* Projects Grid - Visual Focus */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filteredProjects.map((project) => (
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className={`group cursor-pointer ${
-                index === 0 ? 'md:col-span-2 lg:col-span-2' : ''
-              }`}
+              className="group cursor-pointer relative overflow-hidden rounded-lg aspect-[4/3] bg-secondary"
             >
-              <div className="relative overflow-hidden rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-500 shadow-lg shadow-primary/5">
-                {/* Image */}
-                <div className={`relative overflow-hidden ${index === 0 ? 'aspect-[16/9]' : 'aspect-[4/3]'}`}>
-                  <img
-                    src={project.thumbnail}
-                    alt={project.client}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity" />
-                  
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4">
-                    <span 
-                      className="bg-background/80 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider"
-                      style={{ fontFamily: 'Inter, sans-serif' }}
-                    >
-                      {project.category}
-                    </span>
-                  </div>
+              {/* Project Image */}
+              <img
+                src={project.thumbnail}
+                alt={project.client}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+              
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                <span className="text-primary text-xs font-medium uppercase tracking-wider mb-1">
+                  {project.category}
+                </span>
+                <h3 className="text-white text-xl font-bold" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  {project.client}
+                </h3>
+              </div>
 
-                  {/* Arrow Icon */}
-                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center transform translate-x-12 group-hover:translate-x-0 transition-transform duration-300">
-                    <ArrowUpRight size={20} className="text-primary-foreground" />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <h3 
-                        className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-2"
-                        style={{ fontFamily: 'Montserrat, sans-serif' }}
-                      >
-                        {project.client}
-                      </h3>
-                      <p 
-                        className="text-muted-foreground text-sm line-clamp-2"
-                        style={{ fontFamily: 'Inter, sans-serif' }}
-                      >
-                        {project.description}
-                      </p>
-                    </div>
-                    <span 
-                      className="text-primary text-sm font-medium shrink-0"
-                      style={{ fontFamily: 'Inter, sans-serif' }}
-                    >
-                      {project.year}
-                    </span>
-                  </div>
-
-                  {/* Services Tags */}
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {project.services.slice(0, 3).map((service, idx) => (
-                      <span 
-                        key={idx}
-                        className="text-xs text-muted-foreground bg-secondary px-2 py-1 rounded"
-                        style={{ fontFamily: 'Inter, sans-serif' }}
-                      >
-                        {service}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+              {/* Always visible title at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 group-hover:opacity-0 transition-opacity">
+                <h3 className="text-white text-lg font-semibold" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  {project.client}
+                </h3>
               </div>
             </div>
           ))}
@@ -156,7 +82,7 @@ const PortfolioSection = () => {
         {/* Empty State */}
         {filteredProjects.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-muted-foreground text-lg">Nenhum projeto encontrado nesta categoria.</p>
+            <p className="text-muted-foreground">Nenhum projeto encontrado.</p>
           </div>
         )}
       </div>
