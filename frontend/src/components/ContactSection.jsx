@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Send, MessageCircle, Instagram, Linkedin } from 'l
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { contactData } from '../data/mock';
+import { contactData, logoUrl } from '../data/mock';
 import { toast } from '../hooks/use-toast';
 
 const ContactSection = () => {
@@ -51,30 +51,30 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-[#302f2c] relative overflow-hidden">
+    <section id="contact" className="py-24 lg:py-32 bg-card relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#d9fb06]/30 to-transparent" />
-      <div className="absolute right-0 bottom-0 w-1/2 h-96 bg-[#d9fb06]/5 blur-3xl" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      <div className="absolute right-0 bottom-0 w-1/2 h-96 bg-primary/5 blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-12 h-px bg-[#d9fb06]" />
+            <div className="w-12 h-px bg-primary" />
             <span 
-              className="text-[#d9fb06] text-sm font-medium uppercase tracking-widest"
+              className="text-primary text-sm font-medium uppercase tracking-widest"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Contato
             </span>
-            <div className="w-12 h-px bg-[#d9fb06]" />
+            <div className="w-12 h-px bg-primary" />
           </div>
           
           <h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground uppercase leading-tight"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
-            Pronto para <span className="text-[#d9fb06]">transformar</span>
+            Pronto para <span className="text-primary">transformar</span>
             <br />sua marca?
           </h2>
         </div>
@@ -82,8 +82,26 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left - Contact Info */}
           <div className="space-y-8">
+            {/* Logo */}
+            <div className="flex items-center gap-4 mb-8">
+              <img 
+                src={logoUrl}
+                alt="Nexus Marketing"
+                className="w-16 h-16 object-contain rounded-full"
+              />
+              <div>
+                <h3 
+                  className="text-2xl font-bold text-foreground"
+                  style={{ fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  Nexus Marketing
+                </h3>
+                <p className="text-muted-foreground">Transformando marcas em resultados</p>
+              </div>
+            </div>
+
             <p 
-              className="text-lg text-[#888680] leading-relaxed"
+              className="text-lg text-muted-foreground leading-relaxed"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Vamos conversar sobre seu próximo projeto. Entre em contato 
@@ -96,20 +114,20 @@ const ContactSection = () => {
                 <a
                   key={index}
                   href={info.href}
-                  className="flex items-center gap-4 bg-[#1a1c1b] p-5 rounded-xl border border-[#3f4816] hover:border-[#d9fb06]/50 transition-all group"
+                  className="flex items-center gap-4 bg-secondary p-5 rounded-xl border border-border hover:border-primary/50 transition-all group"
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#3f4816]/50 flex items-center justify-center group-hover:bg-[#d9fb06]/20 transition-colors">
-                    <info.icon size={22} className="text-[#d9fb06]" />
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <info.icon size={22} className="text-primary" />
                   </div>
                   <div>
                     <p 
-                      className="text-[#888680] text-sm uppercase tracking-wide"
+                      className="text-muted-foreground text-sm uppercase tracking-wide"
                       style={{ fontFamily: 'Inter, sans-serif' }}
                     >
                       {info.label}
                     </p>
                     <p 
-                      className="text-white font-medium"
+                      className="text-foreground font-medium"
                       style={{ fontFamily: 'Inter, sans-serif' }}
                     >
                       {info.value}
@@ -122,7 +140,7 @@ const ContactSection = () => {
             {/* Social Links */}
             <div>
               <p 
-                className="text-[#888680] text-sm uppercase tracking-wide mb-4"
+                className="text-muted-foreground text-sm uppercase tracking-wide mb-4"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Siga-nos
@@ -134,7 +152,7 @@ const ContactSection = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-[#1a1c1b] border border-[#3f4816] flex items-center justify-center text-[#888680] hover:text-[#d9fb06] hover:border-[#d9fb06] transition-all"
+                    className="w-12 h-12 rounded-full bg-secondary border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
                     aria-label={social.label}
                   >
                     <social.icon size={20} />
@@ -145,9 +163,9 @@ const ContactSection = () => {
           </div>
 
           {/* Right - Contact Form */}
-          <div className="bg-[#1a1c1b] p-8 rounded-2xl border border-[#3f4816]">
+          <div className="bg-secondary p-8 rounded-2xl border border-border">
             <h3 
-              className="text-2xl font-bold text-white mb-6 uppercase"
+              className="text-2xl font-bold text-foreground mb-6 uppercase"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               Solicitar Orçamento
@@ -156,7 +174,7 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label 
-                  className="text-[#888680] text-sm uppercase tracking-wide mb-2 block"
+                  className="text-muted-foreground text-sm uppercase tracking-wide mb-2 block"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   Nome
@@ -167,13 +185,13 @@ const ContactSection = () => {
                   onChange={handleChange}
                   placeholder="Seu nome completo"
                   required
-                  className="bg-[#302f2c] border-[#3f4816] text-white placeholder:text-[#888680]/50 focus:border-[#d9fb06] rounded-xl py-6"
+                  className="bg-card border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary rounded-xl py-6"
                 />
               </div>
 
               <div>
                 <label 
-                  className="text-[#888680] text-sm uppercase tracking-wide mb-2 block"
+                  className="text-muted-foreground text-sm uppercase tracking-wide mb-2 block"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   Email
@@ -185,13 +203,13 @@ const ContactSection = () => {
                   onChange={handleChange}
                   placeholder="seu@email.com"
                   required
-                  className="bg-[#302f2c] border-[#3f4816] text-white placeholder:text-[#888680]/50 focus:border-[#d9fb06] rounded-xl py-6"
+                  className="bg-card border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary rounded-xl py-6"
                 />
               </div>
 
               <div>
                 <label 
-                  className="text-[#888680] text-sm uppercase tracking-wide mb-2 block"
+                  className="text-muted-foreground text-sm uppercase tracking-wide mb-2 block"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   Empresa
@@ -201,13 +219,13 @@ const ContactSection = () => {
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="Nome da sua empresa"
-                  className="bg-[#302f2c] border-[#3f4816] text-white placeholder:text-[#888680]/50 focus:border-[#d9fb06] rounded-xl py-6"
+                  className="bg-card border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary rounded-xl py-6"
                 />
               </div>
 
               <div>
                 <label 
-                  className="text-[#888680] text-sm uppercase tracking-wide mb-2 block"
+                  className="text-muted-foreground text-sm uppercase tracking-wide mb-2 block"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   Mensagem
@@ -219,18 +237,18 @@ const ContactSection = () => {
                   placeholder="Conte-nos sobre seu projeto..."
                   required
                   rows={4}
-                  className="bg-[#302f2c] border-[#3f4816] text-white placeholder:text-[#888680]/50 focus:border-[#d9fb06] rounded-xl resize-none"
+                  className="bg-card border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary rounded-xl resize-none"
                 />
               </div>
 
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#d9fb06] text-[#1a1c1b] hover:bg-[#d9fb06]/90 rounded-full py-6 font-semibold uppercase tracking-wide disabled:opacity-50 transition-all"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-6 font-semibold uppercase tracking-wide disabled:opacity-50 transition-all"
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-2">
-                    <div className="w-5 h-5 border-2 border-[#1a1c1b] border-t-transparent rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
                     Enviando...
                   </span>
                 ) : (

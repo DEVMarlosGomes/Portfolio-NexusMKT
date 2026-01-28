@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
 
@@ -14,22 +14,22 @@ const ProjectModal = ({ project, onClose }) => {
     };
   }, []);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setIsVisible(false);
     setTimeout(onClose, 300);
-  };
+  }, [onClose]);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCurrentImageIndex((prev) => 
       prev === project.images.length - 1 ? 0 : prev + 1
     );
-  };
+  }, [project.images.length]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     setCurrentImageIndex((prev) => 
       prev === 0 ? project.images.length - 1 : prev - 1
     );
-  };
+  }, [project.images.length]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -39,7 +39,7 @@ const ProjectModal = ({ project, onClose }) => {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [handleClose, nextImage, prevImage]);
 
   return (
     <div 
@@ -49,27 +49,27 @@ const ProjectModal = ({ project, onClose }) => {
     >
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-[#1a1c1b]/95 backdrop-blur-md"
+        className="absolute inset-0 bg-background/95 backdrop-blur-md"
         onClick={handleClose}
       />
 
       {/* Modal Content */}
       <div 
-        className={`relative w-full max-w-6xl max-h-[90vh] overflow-auto bg-[#1a1c1b] rounded-2xl border border-[#3f4816] transform transition-all duration-300 ${
+        className={`relative w-full max-w-6xl max-h-[90vh] overflow-auto bg-card rounded-2xl border border-border shadow-2xl transform transition-all duration-300 ${
           isVisible ? 'scale-100 translate-y-0' : 'scale-95 translate-y-8'
         }`}
       >
         {/* Close Button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-[#302f2c] border border-[#3f4816] flex items-center justify-center text-white hover:text-[#d9fb06] hover:border-[#d9fb06] transition-all"
+          className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-secondary border border-border flex items-center justify-center text-foreground hover:text-primary hover:border-primary transition-all"
         >
           <X size={20} />
         </button>
 
         <div className="grid lg:grid-cols-5 gap-0">
           {/* Image Gallery - 3 columns */}
-          <div className="lg:col-span-3 relative bg-[#302f2c]">
+          <div className="lg:col-span-3 relative bg-secondary">
             {/* Main Image */}
             <div className="relative aspect-[16/10]">
               <img
@@ -83,13 +83,13 @@ const ProjectModal = ({ project, onClose }) => {
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#1a1c1b]/80 backdrop-blur-sm flex items-center justify-center text-white hover:text-[#d9fb06] hover:bg-[#1a1c1b] transition-all"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:text-primary hover:bg-background transition-all"
                   >
                     <ChevronLeft size={24} />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#1a1c1b]/80 backdrop-blur-sm flex items-center justify-center text-white hover:text-[#d9fb06] hover:bg-[#1a1c1b] transition-all"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center text-foreground hover:text-primary hover:bg-background transition-all"
                   >
                     <ChevronRight size={24} />
                   </button>
@@ -97,33 +97,35 @@ const ProjectModal = ({ project, onClose }) => {
               )}
 
               {/* Image Counter */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#1a1c1b]/80 backdrop-blur-sm px-4 py-2 rounded-full">
-                <span className="text-white text-sm font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full">
+                <span className="text-foreground text-sm font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>
                   {currentImageIndex + 1} / {project.images.length}
                 </span>
               </div>
             </div>
 
             {/* Thumbnail Strip */}
-            <div className="flex gap-2 p-4 overflow-x-auto">
-              {project.images.map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  className={`shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                    index === currentImageIndex 
-                      ? 'border-[#d9fb06]' 
-                      : 'border-transparent hover:border-[#3f4816]'
-                  }`}
-                >
-                  <img
-                    src={image}
-                    alt={`Thumbnail ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
-            </div>
+            {project.images.length > 1 && (
+              <div className="flex gap-2 p-4 overflow-x-auto">
+                {project.images.map((image, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                      index === currentImageIndex 
+                        ? 'border-primary' 
+                        : 'border-transparent hover:border-border'
+                    }`}
+                  >
+                    <img
+                      src={image}
+                      alt={`Thumbnail ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Project Details - 2 columns */}
@@ -131,13 +133,13 @@ const ProjectModal = ({ project, onClose }) => {
             {/* Header */}
             <div>
               <span 
-                className="text-[#d9fb06] text-sm font-medium uppercase tracking-wider"
+                className="text-primary text-sm font-medium uppercase tracking-wider"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 {project.category} • {project.year}
               </span>
               <h2 
-                className="text-3xl font-bold text-white mt-2 uppercase"
+                className="text-3xl font-bold text-foreground mt-2 uppercase"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 {project.client}
@@ -147,13 +149,13 @@ const ProjectModal = ({ project, onClose }) => {
             {/* Description */}
             <div>
               <h3 
-                className="text-white font-semibold mb-2 uppercase text-sm tracking-wide"
+                className="text-foreground font-semibold mb-2 uppercase text-sm tracking-wide"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Visão Geral
               </h3>
               <p 
-                className="text-[#888680] leading-relaxed"
+                className="text-muted-foreground leading-relaxed"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 {project.description}
@@ -163,13 +165,13 @@ const ProjectModal = ({ project, onClose }) => {
             {/* Challenge */}
             <div>
               <h3 
-                className="text-white font-semibold mb-2 uppercase text-sm tracking-wide"
+                className="text-foreground font-semibold mb-2 uppercase text-sm tracking-wide"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Desafio
               </h3>
               <p 
-                className="text-[#888680] leading-relaxed"
+                className="text-muted-foreground leading-relaxed"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 {project.challenge}
@@ -179,13 +181,13 @@ const ProjectModal = ({ project, onClose }) => {
             {/* Solution */}
             <div>
               <h3 
-                className="text-white font-semibold mb-2 uppercase text-sm tracking-wide"
+                className="text-foreground font-semibold mb-2 uppercase text-sm tracking-wide"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Solução
               </h3>
               <p 
-                className="text-[#888680] leading-relaxed"
+                className="text-muted-foreground leading-relaxed"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 {project.solution}
@@ -195,7 +197,7 @@ const ProjectModal = ({ project, onClose }) => {
             {/* Color Palette */}
             <div>
               <h3 
-                className="text-white font-semibold mb-3 uppercase text-sm tracking-wide"
+                className="text-foreground font-semibold mb-3 uppercase text-sm tracking-wide"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Paleta de Cores
@@ -204,14 +206,14 @@ const ProjectModal = ({ project, onClose }) => {
                 {project.colorPalette.map((color, index) => (
                   <div 
                     key={index}
-                    className="flex items-center gap-2 bg-[#302f2c] px-3 py-2 rounded-lg"
+                    className="flex items-center gap-2 bg-secondary px-3 py-2 rounded-lg"
                   >
                     <div 
-                      className="w-5 h-5 rounded-full border border-[#3f4816]"
+                      className="w-5 h-5 rounded-full border border-border"
                       style={{ backgroundColor: color.hex }}
                     />
                     <span 
-                      className="text-xs text-[#888680]"
+                      className="text-xs text-muted-foreground"
                       style={{ fontFamily: 'Inter, sans-serif' }}
                     >
                       {color.name}
@@ -224,13 +226,13 @@ const ProjectModal = ({ project, onClose }) => {
             {/* Typography */}
             <div>
               <h3 
-                className="text-white font-semibold mb-2 uppercase text-sm tracking-wide"
+                className="text-foreground font-semibold mb-2 uppercase text-sm tracking-wide"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Tipografia
               </h3>
               <p 
-                className="text-[#d9fb06]"
+                className="text-primary"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 {project.typography}
@@ -240,7 +242,7 @@ const ProjectModal = ({ project, onClose }) => {
             {/* Services */}
             <div>
               <h3 
-                className="text-white font-semibold mb-3 uppercase text-sm tracking-wide"
+                className="text-foreground font-semibold mb-3 uppercase text-sm tracking-wide"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Serviços
@@ -249,7 +251,7 @@ const ProjectModal = ({ project, onClose }) => {
                 {project.services.map((service, index) => (
                   <span 
                     key={index}
-                    className="text-sm text-[#d9fb06] border border-[#3f4816] px-3 py-1 rounded-full"
+                    className="text-sm text-primary border border-primary/30 px-3 py-1 rounded-full"
                     style={{ fontFamily: 'Inter, sans-serif' }}
                   >
                     {service}
@@ -259,10 +261,13 @@ const ProjectModal = ({ project, onClose }) => {
             </div>
 
             {/* CTA */}
-            <div className="pt-4 border-t border-[#3f4816]">
+            <div className="pt-4 border-t border-border">
               <Button
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full bg-[#d9fb06] text-[#1a1c1b] hover:bg-[#d9fb06]/90 rounded-full py-6 font-semibold uppercase tracking-wide"
+                onClick={() => {
+                  handleClose();
+                  setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 400);
+                }}
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-6 font-semibold uppercase tracking-wide"
               >
                 <ExternalLink size={18} className="mr-2" />
                 Solicitar Orçamento
