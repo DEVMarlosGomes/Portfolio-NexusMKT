@@ -117,6 +117,32 @@ export const projects = [
     ],
     typography: "Montserrat Bold + Open Sans",
     services: ["Social Media Design", "Material Imobiliário", "Post Instagram", "Peça Promocional"]
+  },
+  {
+    id: 6,
+    client: "ECAV - Escola Cristã Árvore da Vida",
+    category: "Branding",
+    year: "2025",
+    description: "Rebranding completo da escola infantil. Transição da marca 'C.R.I Moranguinho' para 'Escola Cristã Árvore da Vida' (ECAV). Projeto incluiu nova identidade visual, logo, fachada e materiais de comunicação com conceito de crescimento e valores educacionais.",
+    challenge: "Modernizar a marca mantendo a essência acolhedora e os valores cristãos da instituição. Comunicar a transição de forma positiva para a comunidade escolar.",
+    solution: "Criamos uma identidade visual centrada na árvore da vida, simbolizando crescimento, raízes fortes e futuro abençoado. A paleta de cores terrosas e verdes transmite natureza, acolhimento e educação. Campanha 'Estamos Crescendo!' para comunicar a mudança.",
+    thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/nibhh27h_5.png",
+    images: [
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/nibhh27h_5.png",
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/q4imdeuu_3.png",
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/vidwu7q3_2%20%281%29.png",
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/nxku77c9_1%20%281%29.png",
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/rvojdup5_4.png"
+    ],
+    colorPalette: [
+      { name: "Verde Oliva", hex: "#6B8E23" },
+      { name: "Verde Claro", hex: "#9ACD32" },
+      { name: "Marrom Terra", hex: "#5D4037" },
+      { name: "Bege Natural", hex: "#F5F5DC" },
+      { name: "Azul Água", hex: "#5DADE2" }
+    ],
+    typography: "Quicksand + Lora",
+    services: ["Rebranding", "Logo Design", "Identidade Visual", "Fachada", "Social Media", "Campanha de Lançamento"]
   }
 ];
 
