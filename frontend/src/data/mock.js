@@ -28,6 +28,30 @@ export const projects = [
     ],
     typography: "Montserrat + Playfair Display",
     services: ["Logo Design", "Identidade Visual", "Paleta de Cores", "Patterns", "Mockups", "Fachada", "Interior"]
+  },
+  {
+    id: 2,
+    client: "Birmânia Seguros",
+    category: "Social Media",
+    year: "2025",
+    description: "Criação de peças para redes sociais da corretora de seguros Birmânia. Campanhas de Turbo Consórcio Porto Seguro Bank para veículos e imóveis, além de materiais institucionais destacando os serviços oferecidos.",
+    challenge: "Comunicar de forma clara e atrativa as ofertas de consórcio e seguros, transmitindo confiança e profissionalismo para o público-alvo.",
+    solution: "Desenvolvemos um conjunto de peças visuais com design moderno e corporativo, utilizando azul como cor principal para transmitir segurança e credibilidade. As peças destacam valores, parcelas e benefícios de forma objetiva.",
+    thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/7l316xbv_WhatsApp%20Image%202026-01-27%20at%2020.27.10%20%281%29.jpeg",
+    images: [
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/7l316xbv_WhatsApp%20Image%202026-01-27%20at%2020.27.10%20%281%29.jpeg",
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/08bynn55_WhatsApp%20Image%202026-01-27%20at%2020.27.10.jpeg",
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/2m4ixv3k_WhatsApp%20Image%202026-01-27%20at%2020.27.09%20%281%29.jpeg",
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/4uswi70l_WhatsApp%20Image%202026-01-27%20at%2020.27.09.jpeg"
+    ],
+    colorPalette: [
+      { name: "Azul Corporativo", hex: "#0066CC" },
+      { name: "Azul Claro", hex: "#00A3E0" },
+      { name: "Cinza Escuro", hex: "#4A4A4A" },
+      { name: "Branco", hex: "#FFFFFF" }
+    ],
+    typography: "Montserrat Bold + Open Sans",
+    services: ["Social Media Design", "Campanhas Digitais", "Posts Instagram", "Material Publicitário"]
   }
 ];
 
