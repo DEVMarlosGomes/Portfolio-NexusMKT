@@ -52,6 +52,49 @@ export const projects = [
     ],
     typography: "Montserrat Bold + Open Sans",
     services: ["Social Media Design", "Campanhas Digitais", "Posts Instagram", "Material Publicitário"]
+  },
+  {
+    id: 3,
+    client: "CFC-A Teóricotran",
+    category: "Social Media",
+    year: "2025",
+    description: "Design de campanha digital para curso teórico de autoescola online. Peças promocionais para redes sociais divulgando vagas abertas e benefícios da plataforma de ensino à distância.",
+    challenge: "Atrair público para curso online de autoescola, comunicando praticidade e qualidade do ensino remoto de forma visual e impactante.",
+    solution: "Criamos peças com visual moderno e dinâmico, utilizando elementos geométricos e cores vibrantes (azul e dourado) que transmitem profissionalismo e tecnologia. Destaque para os benefícios do estudo online.",
+    thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/p429wycp_WhatsApp%20Image%202026-01-27%20at%2020.55.48.jpeg",
+    images: [
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/p429wycp_WhatsApp%20Image%202026-01-27%20at%2020.55.48.jpeg"
+    ],
+    colorPalette: [
+      { name: "Azul Royal", hex: "#1E3A5F" },
+      { name: "Dourado", hex: "#C8A951" },
+      { name: "Vermelho", hex: "#C41E3A" },
+      { name: "Branco", hex: "#FFFFFF" }
+    ],
+    typography: "Impact + Open Sans",
+    services: ["Social Media Design", "Campanha Digital", "Post Instagram"]
+  },
+  {
+    id: 4,
+    client: "POÁ Auto Moto Escola",
+    category: "Social Media",
+    year: "2024",
+    description: "Design de campanha digital para autoescola POÁ. Peças promocionais destacando curso online com vagas abertas, aulas 100% online e plataforma intuitiva para formação de condutores.",
+    challenge: "Comunicar a praticidade do curso online de forma atrativa para o público jovem, destacando a flexibilidade e acessibilidade do ensino à distância.",
+    solution: "Visual impactante com formas geométricas e gradientes em azul, transmitindo modernidade e tecnologia. Elementos visuais dinâmicos e chamadas claras para ação com informações de contato.",
+    thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/08ffd00s_WhatsApp%20Image%202026-01-27%20at%2020.50.33.jpeg",
+    images: [
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/08ffd00s_WhatsApp%20Image%202026-01-27%20at%2020.50.33.jpeg"
+    ],
+    colorPalette: [
+      { name: "Azul Vibrante", hex: "#3366FF" },
+      { name: "Azul Claro", hex: "#66B3FF" },
+      { name: "Amarelo", hex: "#FFD700" },
+      { name: "Vermelho", hex: "#FF0000" },
+      { name: "Branco", hex: "#FFFFFF" }
+    ],
+    typography: "Bebas Neue + Roboto",
+    services: ["Social Media Design", "Campanha Digital", "Post Instagram"]
   }
 ];
 
