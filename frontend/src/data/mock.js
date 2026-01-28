@@ -83,5 +83,5 @@ export const contactData = {
   linkedin: "nexus-marketing"
 };
 
-// Logo URL
-export const logoUrl = "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/8uvfvzbm_image.png";
+// Logo URL - NEXUS MARKETING
+export const logoUrl = "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/nngv20wt_image.png";
