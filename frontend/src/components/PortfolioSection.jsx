@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
 import { projects, categories } from '../data/mock';
 import ProjectModal from './ProjectModal';
 
@@ -11,17 +12,17 @@ const PortfolioSection = () => {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-16 lg:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+    <section id="portfolio" className="py-16 lg:py-24 bg-secondary/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 
-            className="text-4xl md:text-5xl font-black text-foreground uppercase mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground uppercase mb-4"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
             Portfólio
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto">
             Conheça nossos projetos de identidade visual e marketing
           </p>
         </div>
@@ -32,10 +33,10 @@ const PortfolioSection = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+              className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                 activeCategory === category
                   ? 'bg-primary text-primary-foreground'
-                  : 'bg-secondary text-muted-foreground hover:text-foreground'
+                  : 'bg-card text-muted-foreground hover:text-foreground border border-border'
               }`}
             >
               {category}
@@ -43,37 +44,76 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* Projects Grid - Visual Focus */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Projects Grid - Cards with Logo */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="group cursor-pointer relative overflow-hidden rounded-lg aspect-[4/3] bg-secondary"
+              className="group cursor-pointer bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
             >
               {/* Project Image */}
-              <img
-                src={project.thumbnail}
-                alt={project.client}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                loading="lazy"
-              />
-              
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                <span className="text-primary text-xs font-medium uppercase tracking-wider mb-1">
-                  {project.category}
-                </span>
-                <h3 className="text-white text-xl font-bold" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  {project.client}
-                </h3>
+              <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
+                <img
+                  src={project.thumbnail}
+                  alt={project.client}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                {/* Category Badge */}
+                <div className="absolute top-3 right-3">
+                  <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-xs font-medium">
+                    {project.category}
+                  </span>
+                </div>
               </div>
 
-              {/* Always visible title at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 group-hover:opacity-0 transition-opacity">
-                <h3 className="text-white text-lg font-semibold" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  {project.client}
-                </h3>
+              {/* Card Content with Logo */}
+              <div className="p-4 sm:p-5">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  {/* Logo */}
+                  {project.logo ? (
+                    <div className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border border-border overflow-hidden flex items-center justify-center p-1">
+                      <img
+                        src={project.logo}
+                        alt={`Logo ${project.client}`}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 border border-border flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">
+                        {project.client.charAt(0)}
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Info */}
+                  <div className="flex-1 min-w-0">
+                    <h3 
+                      className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors truncate"
+                      style={{ fontFamily: 'Montserrat, sans-serif' }}
+                    >
+                      {project.client}
+                    </h3>
+                    <p 
+                      className="text-muted-foreground text-xs sm:text-sm line-clamp-2 mt-1"
+                      style={{ fontFamily: 'Inter, sans-serif' }}
+                    >
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Footer */}
+                <div className="flex items-center justify-between mt-4 pt-3 border-t border-border">
+                  <span className="text-xs text-muted-foreground">{project.year}</span>
+                  <span className="flex items-center gap-1 text-primary text-xs sm:text-sm font-medium group-hover:gap-2 transition-all">
+                    Ver projeto <ArrowRight size={14} />
+                  </span>
+                </div>
               </div>
             </div>
           ))}
