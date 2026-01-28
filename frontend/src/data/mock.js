@@ -7,9 +7,10 @@ export const projects = [
     client: "Gold Coffee",
     category: "Branding",
     year: "2026",
-    description: "Identidade visual completa para cafeteria premium. O projeto envolveu a criação de logo, paleta de cores, tipografia, patterns e aplicações em diversos materiais, incluindo fachada, interior e papelaria.",
-    challenge: "Criar uma marca que transmitisse qualidade premium e aconchego, diferenciando-se no mercado de cafeterias com uma identidade memorável.",
-    solution: "Desenvolvemos uma identidade visual com tons terrosos e dourados, evocando a sofisticação do café artesanal. O logo circular remete às tradicionais marcas de café, enquanto a paleta de cores naturais transmite autenticidade.",
+    description: "Identidade visual completa para cafeteria premium. Criação de logo, paleta de cores, tipografia, patterns e aplicações.",
+    challenge: "Criar uma marca que transmitisse qualidade premium e aconchego, diferenciando-se no mercado de cafeterias.",
+    solution: "Identidade visual com tons terrosos e dourados, evocando a sofisticação do café artesanal.",
+    logo: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/648ysue4_image.png",
     thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/6eqew4rz_WhatsApp%20Image%202026-01-27%20at%2020.46.01.jpeg",
     images: [
       "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/6eqew4rz_WhatsApp%20Image%202026-01-27%20at%2020.46.01.jpeg",
@@ -23,20 +24,20 @@ export const projects = [
       { name: "Verde Sálvia", hex: "#B8BB86" },
       { name: "Ocre Dourado", hex: "#C89A52" },
       { name: "Marrom Escuro", hex: "#2B160C" },
-      { name: "Marrom Caramelo", hex: "#7A4608" },
       { name: "Marfim", hex: "#F5F3E7" }
     ],
     typography: "Montserrat + Playfair Display",
-    services: ["Logo Design", "Identidade Visual", "Paleta de Cores", "Patterns", "Mockups", "Fachada", "Interior"]
+    services: ["Logo Design", "Identidade Visual", "Paleta de Cores", "Patterns", "Mockups"]
   },
   {
     id: 2,
     client: "Birmânia Seguros",
     category: "Social Media",
     year: "2025",
-    description: "Criação de peças para redes sociais da corretora de seguros Birmânia. Campanhas de Turbo Consórcio Porto Seguro Bank para veículos e imóveis, além de materiais institucionais destacando os serviços oferecidos.",
-    challenge: "Comunicar de forma clara e atrativa as ofertas de consórcio e seguros, transmitindo confiança e profissionalismo para o público-alvo.",
-    solution: "Desenvolvemos um conjunto de peças visuais com design moderno e corporativo, utilizando azul como cor principal para transmitir segurança e credibilidade. As peças destacam valores, parcelas e benefícios de forma objetiva.",
+    description: "Peças para redes sociais da corretora. Campanhas Turbo Consórcio Porto Seguro Bank para veículos e imóveis.",
+    challenge: "Comunicar ofertas de consórcio e seguros transmitindo confiança e profissionalismo.",
+    solution: "Design moderno e corporativo com azul como cor principal para transmitir segurança e credibilidade.",
+    logo: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/ikgar219_image.png",
     thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/7l316xbv_WhatsApp%20Image%202026-01-27%20at%2020.27.10%20%281%29.jpeg",
     images: [
       "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/7l316xbv_WhatsApp%20Image%202026-01-27%20at%2020.27.10%20%281%29.jpeg",
@@ -51,16 +52,17 @@ export const projects = [
       { name: "Branco", hex: "#FFFFFF" }
     ],
     typography: "Montserrat Bold + Open Sans",
-    services: ["Social Media Design", "Campanhas Digitais", "Posts Instagram", "Material Publicitário"]
+    services: ["Social Media Design", "Campanhas Digitais", "Posts Instagram"]
   },
   {
     id: 3,
     client: "CFC-A Teóricotran",
     category: "Social Media",
     year: "2025",
-    description: "Design de campanha digital para curso teórico de autoescola online. Peças promocionais para redes sociais divulgando vagas abertas e benefícios da plataforma de ensino à distância.",
-    challenge: "Atrair público para curso online de autoescola, comunicando praticidade e qualidade do ensino remoto de forma visual e impactante.",
-    solution: "Criamos peças com visual moderno e dinâmico, utilizando elementos geométricos e cores vibrantes (azul e dourado) que transmitem profissionalismo e tecnologia. Destaque para os benefícios do estudo online.",
+    description: "Campanha digital para curso teórico de autoescola online. Peças promocionais para redes sociais.",
+    challenge: "Atrair público para curso online comunicando praticidade e qualidade do ensino remoto.",
+    solution: "Visual moderno com elementos geométricos e cores vibrantes que transmitem profissionalismo.",
+    logo: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/ansorard_image.png",
     thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/p429wycp_WhatsApp%20Image%202026-01-27%20at%2020.55.48.jpeg",
     images: [
       "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/p429wycp_WhatsApp%20Image%202026-01-27%20at%2020.55.48.jpeg"
@@ -79,9 +81,10 @@ export const projects = [
     client: "POÁ Auto Moto Escola",
     category: "Social Media",
     year: "2024",
-    description: "Design de campanha digital para autoescola POÁ. Peças promocionais destacando curso online com vagas abertas, aulas 100% online e plataforma intuitiva para formação de condutores.",
-    challenge: "Comunicar a praticidade do curso online de forma atrativa para o público jovem, destacando a flexibilidade e acessibilidade do ensino à distância.",
-    solution: "Visual impactante com formas geométricas e gradientes em azul, transmitindo modernidade e tecnologia. Elementos visuais dinâmicos e chamadas claras para ação com informações de contato.",
+    description: "Campanha digital para autoescola POÁ. Peças destacando curso online 100% à distância.",
+    challenge: "Comunicar praticidade do curso online para público jovem com flexibilidade e acessibilidade.",
+    solution: "Visual impactante com gradientes em azul transmitindo modernidade e tecnologia.",
+    logo: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/x25617i5_image.png",
     thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/08ffd00s_WhatsApp%20Image%202026-01-27%20at%2020.50.33.jpeg",
     images: [
       "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/08ffd00s_WhatsApp%20Image%202026-01-27%20at%2020.50.33.jpeg"
@@ -90,8 +93,7 @@ export const projects = [
       { name: "Azul Vibrante", hex: "#3366FF" },
       { name: "Azul Claro", hex: "#66B3FF" },
       { name: "Amarelo", hex: "#FFD700" },
-      { name: "Vermelho", hex: "#FF0000" },
-      { name: "Branco", hex: "#FFFFFF" }
+      { name: "Vermelho", hex: "#FF0000" }
     ],
     typography: "Bebas Neue + Roboto",
     services: ["Social Media Design", "Campanha Digital", "Post Instagram"]
@@ -101,9 +103,10 @@ export const projects = [
     client: "Resort Urbano - Marlos Gomes",
     category: "Social Media",
     year: "2025",
-    description: "Peça ilustrada para lançamento imobiliário Resort Urbano. Material promocional para o Corretor Marlos Gomes destacando apartamentos de 1, 2 e 3 dormitórios com diversas amenidades de lazer.",
-    challenge: "Comunicar o conceito de 'Resort Urbano' de forma atrativa, destacando as diversas opções de lazer e características dos apartamentos para potenciais compradores.",
-    solution: "Design moderno e sofisticado com visual premium em tons de azul e dourado. Destaque para amenidades como Sala Gamer, Youtube Space, Beach Tenis, Spa, Piscina Semiolímpica e Prainha. Layout organizado com imagens do empreendimento.",
+    description: "Peça ilustrada para lançamento imobiliário. Material promocional destacando apartamentos e amenidades.",
+    challenge: "Comunicar conceito de 'Resort Urbano' destacando opções de lazer e características dos apartamentos.",
+    solution: "Design premium em tons de azul e dourado destacando amenidades como Spa, Piscina e Beach Tenis.",
+    logo: null,
     thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/b9riz1q0_WhatsApp%20Image%202026-01-27%20at%2020.55.47.jpeg",
     images: [
       "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/b9riz1q0_WhatsApp%20Image%202026-01-27%20at%2020.55.47.jpeg"
@@ -112,20 +115,20 @@ export const projects = [
       { name: "Azul Profundo", hex: "#1A3A5C" },
       { name: "Turquesa", hex: "#48C9B0" },
       { name: "Dourado", hex: "#C9A227" },
-      { name: "Laranja", hex: "#F39C12" },
-      { name: "Verde", hex: "#27AE60" }
+      { name: "Laranja", hex: "#F39C12" }
     ],
     typography: "Montserrat Bold + Open Sans",
-    services: ["Social Media Design", "Material Imobiliário", "Post Instagram", "Peça Promocional"]
+    services: ["Social Media Design", "Material Imobiliário", "Post Instagram"]
   },
   {
     id: 6,
     client: "ECAV - Escola Cristã Árvore da Vida",
     category: "Branding",
     year: "2025",
-    description: "Rebranding completo da escola infantil. Transição da marca 'C.R.I Moranguinho' para 'Escola Cristã Árvore da Vida' (ECAV). Projeto incluiu nova identidade visual, logo, fachada e materiais de comunicação com conceito de crescimento e valores educacionais.",
-    challenge: "Modernizar a marca mantendo a essência acolhedora e os valores cristãos da instituição. Comunicar a transição de forma positiva para a comunidade escolar.",
-    solution: "Criamos uma identidade visual centrada na árvore da vida, simbolizando crescimento, raízes fortes e futuro abençoado. A paleta de cores terrosas e verdes transmite natureza, acolhimento e educação. Campanha 'Estamos Crescendo!' para comunicar a mudança.",
+    description: "Rebranding completo. Transição de 'C.R.I Moranguinho' para 'Escola Cristã Árvore da Vida'.",
+    challenge: "Modernizar marca mantendo essência acolhedora e valores cristãos da instituição.",
+    solution: "Identidade visual centrada na árvore da vida, simbolizando crescimento e raízes fortes.",
+    logo: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/qc4fs7pv_image.png",
     thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/nibhh27h_5.png",
     images: [
       "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/nibhh27h_5.png",
@@ -138,11 +141,10 @@ export const projects = [
       { name: "Verde Oliva", hex: "#6B8E23" },
       { name: "Verde Claro", hex: "#9ACD32" },
       { name: "Marrom Terra", hex: "#5D4037" },
-      { name: "Bege Natural", hex: "#F5F5DC" },
       { name: "Azul Água", hex: "#5DADE2" }
     ],
     typography: "Quicksand + Lora",
-    services: ["Rebranding", "Logo Design", "Identidade Visual", "Fachada", "Social Media", "Campanha de Lançamento"]
+    services: ["Rebranding", "Logo Design", "Identidade Visual", "Social Media"]
   }
 ];
 
