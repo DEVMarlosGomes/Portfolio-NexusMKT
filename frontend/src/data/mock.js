@@ -95,6 +95,28 @@ export const projects = [
     ],
     typography: "Bebas Neue + Roboto",
     services: ["Social Media Design", "Campanha Digital", "Post Instagram"]
+  },
+  {
+    id: 5,
+    client: "Resort Urbano - Marlos Gomes",
+    category: "Social Media",
+    year: "2025",
+    description: "Peça ilustrada para lançamento imobiliário Resort Urbano. Material promocional para o Corretor Marlos Gomes destacando apartamentos de 1, 2 e 3 dormitórios com diversas amenidades de lazer.",
+    challenge: "Comunicar o conceito de 'Resort Urbano' de forma atrativa, destacando as diversas opções de lazer e características dos apartamentos para potenciais compradores.",
+    solution: "Design moderno e sofisticado com visual premium em tons de azul e dourado. Destaque para amenidades como Sala Gamer, Youtube Space, Beach Tenis, Spa, Piscina Semiolímpica e Prainha. Layout organizado com imagens do empreendimento.",
+    thumbnail: "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/b9riz1q0_WhatsApp%20Image%202026-01-27%20at%2020.55.47.jpeg",
+    images: [
+      "https://customer-assets.emergentagent.com/job_creative-hub-451/artifacts/b9riz1q0_WhatsApp%20Image%202026-01-27%20at%2020.55.47.jpeg"
+    ],
+    colorPalette: [
+      { name: "Azul Profundo", hex: "#1A3A5C" },
+      { name: "Turquesa", hex: "#48C9B0" },
+      { name: "Dourado", hex: "#C9A227" },
+      { name: "Laranja", hex: "#F39C12" },
+      { name: "Verde", hex: "#27AE60" }
+    ],
+    typography: "Montserrat Bold + Open Sans",
+    services: ["Social Media Design", "Material Imobiliário", "Post Instagram", "Peça Promocional"]
   }
 ];
 
