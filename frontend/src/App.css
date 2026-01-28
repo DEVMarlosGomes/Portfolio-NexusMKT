@@ -41,28 +41,28 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Light Mode */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1c1b;
+  background: hsl(var(--background));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3f4816;
+  background: hsl(var(--muted-foreground) / 0.3);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d9fb06;
+  background: hsl(var(--primary));
 }
 
 /* Selection color */
 ::selection {
-  background: #d9fb06;
-  color: #1a1c1b;
+  background: hsl(262, 100%, 65%);
+  color: white;
 }
 
 /* Line clamp utility */
@@ -88,11 +88,18 @@ img.loaded, img:not([loading="lazy"]) {
 
 /* Focus visible styles */
 *:focus-visible {
-  outline: 2px solid #d9fb06;
+  outline: 2px solid hsl(262, 100%, 65%);
   outline-offset: 2px;
 }
 
 /* Prevent horizontal scroll */
 body {
   overflow-x: hidden;
+}
+
+/* Smooth theme transitions */
+* {
+  transition-property: background-color, border-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
 }
