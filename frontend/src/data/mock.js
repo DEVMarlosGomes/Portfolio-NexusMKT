@@ -164,8 +164,8 @@ export const aboutData = {
 
 export const contactData = {
   email: "contato@nexusmarketing.com.br",
-  phone: "(11) 99999-9999",
-  whatsapp: "5511999999999",
+  phone: "(11) 97696-6827",
+  whatsapp: "5511976966827",
   instagram: "@nexusmarketing",
   linkedin: "nexus-marketing"
 };
