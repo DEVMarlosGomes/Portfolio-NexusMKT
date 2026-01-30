@@ -26,12 +26,27 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission (mock)
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // Criar mensagem para WhatsApp
+    const whatsappMessage = `🟣 *NOVO CONTATO - NEXUS MARKETING*
+
+👤 *Nome:* ${formData.name}
+📧 *Email:* ${formData.email}
+🏢 *Empresa:* ${formData.company || 'Não informado'}
+
+💬 *Mensagem:*
+${formData.message}`;
+
+    // Codificar mensagem para URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Abrir WhatsApp com a mensagem
+    const whatsappUrl = `https://wa.me/5511976966827?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
     
     toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve.",
+      title: "Redirecionando para WhatsApp!",
+      description: "Complete o envio da mensagem no WhatsApp.",
     });
     
     setFormData({ name: '', email: '', company: '', message: '' });
