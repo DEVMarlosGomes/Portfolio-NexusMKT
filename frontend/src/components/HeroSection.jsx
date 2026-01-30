@@ -130,7 +130,7 @@ const HeroSection = () => {
                     </div>
                     <div className="w-px h-10 bg-border" />
                     <div className="text-center">
-                      <p className="text-primary text-2xl font-bold" style={{ fontFamily: 'Montserrat, sans-serif' }}>5+</p>
+                      <p className="text-primary text-2xl font-bold" style={{ fontFamily: 'Montserrat, sans-serif' }}>2+</p>
                       <p className="text-muted-foreground text-xs">Anos</p>
                     </div>
                   </div>

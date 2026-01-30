@@ -60,8 +60,8 @@ ${formData.message}`;
   ];
 
   const socialLinks = [
-    { icon: Instagram, label: 'Instagram', href: `https://instagram.com/${contactData.instagram.replace('@', '')}` },
-    { icon: Linkedin, label: 'LinkedIn', href: `https://linkedin.com/company/${contactData.linkedin}` },
+    { icon: Instagram, label: 'Instagram', href: `https://www.instagram.com/_marketingnexus?igsh=MWQwbHhpczY1bXh5Zw%3D%3D${contactData.instagram.replace('@', '')}` },
+    //{ icon: Linkedin, label: 'LinkedIn', href: `https://linkedin.com/company/${contactData.linkedin}` },
     { icon: MessageCircle, label: 'WhatsApp', href: `https://wa.me/${contactData.whatsapp}` },
   ];
 

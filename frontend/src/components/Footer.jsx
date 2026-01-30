@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Heart } from 'lucide-react';
+import { ArrowUp, Car, Heart, Target } from 'lucide-react';
 import { logoUrl } from '../data/mock';
 
 const Footer = () => {
@@ -40,7 +40,7 @@ const Footer = () => {
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               © {currentYear} Nexus Marketing. Feito com 
-              <Heart size={14} className="text-primary fill-current" /> 
+              <Target size={14} className="text-primary fill-current" /> 
               em São Paulo.
             </p>
           </div>

@@ -30,7 +30,7 @@ const AboutSection = () => {
             {/* Floating Card */}
             <div className="absolute -bottom-8 -right-8 bg-card p-6 rounded-xl border border-border max-w-xs shadow-lg">
               <p className="text-primary text-4xl font-bold mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                5+
+                2+
               </p>
               <p className="text-foreground text-lg font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>
                 Anos transformando marcas em resultados

@@ -157,7 +157,7 @@ export const aboutData = {
   stats: [
     { number: "50+", label: "Projetos Entregues" },
     { number: "30+", label: "Clientes Satisfeitos" },
-    { number: "5+", label: "Anos de Experiência" }
+    { number: "2+", label: "Anos de Experiência" }
   ],
   skills: ["Branding", "Marketing Digital", "Social Media", "Design Gráfico", "Identidade Visual"]
 };
@@ -166,7 +166,7 @@ export const contactData = {
   email: "contato@nexusmarketing.com.br",
   phone: "(11) 97696-6827",
   whatsapp: "5511976966827",
-  instagram: "@nexusmarketing",
+  instagram: "@_marketingnexus",
   linkedin: "nexus-marketing"
 };
 
