@@ -271,8 +271,13 @@ const ProjectModal = ({ project, onClose }) => {
             <div className="pt-6 border-t border-border">
               <Button
                 onClick={() => {
-                  handleClose();
-                  setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 400);
+                  const whatsappMessage = `🟣 *INTERESSE EM PROJETO*
+
+Olá! Vi o projeto *${project.client}* no portfólio e gostaria de saber mais sobre os serviços de ${project.category}.
+
+Podem me ajudar?`;
+                  const encodedMessage = encodeURIComponent(whatsappMessage);
+                  window.open(`https://wa.me/5511976966827?text=${encodedMessage}`, '_blank');
                 }}
                 className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-6 px-8 font-semibold uppercase tracking-wide"
               >
