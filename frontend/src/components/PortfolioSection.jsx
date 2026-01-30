@@ -45,39 +45,38 @@ const PortfolioSection = () => {
         </div>
 
         {/* Projects Grid - Cards with Logo */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="group cursor-pointer bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+              className="group cursor-pointer bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 flex flex-col"
             >
-              {/* Project Image */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
+              {/* Project Image - Full Display */}
+              <div className="relative bg-white flex items-center justify-center p-4 min-h-[250px]">
                 <img
                   src={project.thumbnail}
                   alt={project.client}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="max-w-full max-h-[280px] w-auto h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                   onError={(e) => {
                     e.target.style.display = 'none';
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 
                 {/* Category Badge */}
                 <div className="absolute top-3 right-3">
-                  <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-xs font-medium">
+                  <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-xs font-medium shadow-lg">
                     {project.category}
                   </span>
                 </div>
               </div>
 
               {/* Card Content with Logo */}
-              <div className="p-4 sm:p-5">
-                <div className="flex items-start gap-3 sm:gap-4">
+              <div className="p-5 flex-1 flex flex-col">
+                <div className="flex items-start gap-4">
                   {/* Logo */}
                   {project.logo ? (
-                    <div className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border border-border overflow-hidden flex items-center justify-center p-1">
+                    <div className="shrink-0 w-14 h-14 rounded-full bg-white border-2 border-border overflow-hidden flex items-center justify-center p-1 shadow-sm">
                       <img
                         src={project.logo}
                         alt={`Logo ${project.client}`}
@@ -85,8 +84,8 @@ const PortfolioSection = () => {
                       />
                     </div>
                   ) : (
-                    <div className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 border border-border flex items-center justify-center">
-                      <span className="text-primary font-bold text-lg">
+                    <div className="shrink-0 w-14 h-14 rounded-full bg-primary/10 border-2 border-border flex items-center justify-center">
+                      <span className="text-primary font-bold text-xl">
                         {project.client.charAt(0)}
                       </span>
                     </div>
@@ -95,13 +94,13 @@ const PortfolioSection = () => {
                   {/* Info */}
                   <div className="flex-1 min-w-0">
                     <h3 
-                      className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors truncate"
+                      className="text-lg font-bold text-foreground group-hover:text-primary transition-colors"
                       style={{ fontFamily: 'Montserrat, sans-serif' }}
                     >
                       {project.client}
                     </h3>
                     <p 
-                      className="text-muted-foreground text-xs sm:text-sm line-clamp-2 mt-1"
+                      className="text-muted-foreground text-sm mt-1 leading-relaxed"
                       style={{ fontFamily: 'Inter, sans-serif' }}
                     >
                       {project.description}
@@ -109,10 +108,22 @@ const PortfolioSection = () => {
                   </div>
                 </div>
 
+                {/* Services Tags */}
+                <div className="flex flex-wrap gap-1.5 mt-4">
+                  {project.services.slice(0, 4).map((service, idx) => (
+                    <span 
+                      key={idx}
+                      className="text-xs text-muted-foreground bg-secondary px-2 py-1 rounded"
+                    >
+                      {service}
+                    </span>
+                  ))}
+                </div>
+
                 {/* Footer */}
-                <div className="flex items-center justify-between mt-4 pt-3 border-t border-border">
-                  <span className="text-xs text-muted-foreground">{project.year}</span>
-                  <span className="flex items-center gap-1 text-primary text-xs sm:text-sm font-medium group-hover:gap-2 transition-all">
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
+                  <span className="text-xs text-muted-foreground font-medium">{project.year}</span>
+                  <span className="flex items-center gap-1 text-primary text-sm font-medium group-hover:gap-2 transition-all">
                     Ver projeto <ArrowRight size={14} />
                   </span>
                 </div>
