@@ -1,0 +1,19 @@
+<svg width="1080" height="1600" viewBox="0 0 1080 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1600" fill="#ECECEC"/>
+
+  <ellipse cx="540" cy="300" rx="390" ry="190" fill="#0E4D34"/>
+  <text x="540" y="275" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="#FFFFFF">Casa</text>
+  <text x="540" y="388" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="170" font-weight="700" fill="#FFFFFF">Aurelia</text>
+
+  <ellipse cx="540" cy="810" rx="430" ry="208" fill="#0E4D34"/>
+  <ellipse cx="540" cy="810" rx="410" ry="188" stroke="#C30608" stroke-width="24"/>
+  <ellipse cx="540" cy="810" rx="380" ry="158" stroke="#FFFFFF" stroke-width="14"/>
+  <text x="540" y="785" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="#FFFFFF">Casa</text>
+  <text x="540" y="898" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="170" font-weight="700" fill="#FFFFFF">Aurelia</text>
+
+  <ellipse cx="540" cy="1310" rx="430" ry="208" fill="#0E4D34"/>
+  <ellipse cx="540" cy="1310" rx="410" ry="188" stroke="#C30608" stroke-width="24"/>
+  <ellipse cx="540" cy="1310" rx="380" ry="158" stroke="#C8AB45" stroke-width="16"/>
+  <text x="540" y="1285" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" font-weight="700" fill="#FFFFFF">Casa</text>
+  <text x="540" y="1398" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="170" font-weight="700" fill="#FFFFFF">Aurelia</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg width="1080" height="1600" viewBox="0 0 1080 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1600" fill="#ECECEC"/>
+  <rect x="0" y="90" width="620" height="230" fill="#0E4D34"/>
+  <text x="70" y="200" font-family="Georgia, 'Times New Roman', serif" font-size="122" font-weight="700" fill="#FFFFFF">Persona</text>
+  <text x="70" y="283" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="500" fill="#FFFFFF">segmentacao</text>
+
+  <rect x="720" y="100" width="58" height="190" fill="#C8AB45"/>
+  <rect x="810" y="100" width="58" height="190" fill="#C30608"/>
+  <rect x="900" y="100" width="58" height="190" fill="#D9A56A"/>
+  <rect x="990" y="100" width="58" height="190" fill="#0E4D34"/>
+
+  <rect x="76" y="390" width="580" height="620" fill="#0E4D34"/>
+  <rect x="112" y="426" width="508" height="548" fill="#D9A56A"/>
+  <circle cx="366" cy="670" r="186" fill="#1A1A1A" opacity="0.18"/>
+  <rect x="256" y="816" width="220" height="130" rx="60" fill="#1A1A1A" opacity="0.2"/>
+
+  <circle cx="700" cy="470" r="12" fill="#C30608"/>
+  <text x="735" y="495" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" fill="#0C0C0C">Nome:</text>
+  <text x="735" y="565" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#0C0C0C">Mariana Bianchi</text>
+
+  <circle cx="700" cy="635" r="12" fill="#C30608"/>
+  <text x="735" y="660" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" fill="#0C0C0C">Idade:</text>
+  <text x="735" y="730" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#0C0C0C">34 anos</text>
+
+  <circle cx="700" cy="800" r="12" fill="#C30608"/>
+  <text x="735" y="825" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" fill="#0C0C0C">Perfil:</text>
+  <text x="735" y="895" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#0C0C0C">Classe media-alta</text>
+
+  <rect x="430" y="1115" width="500" height="136" fill="#0E4D34"/>
+  <text x="680" y="1202" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="700" fill="#FFFFFF">Publico-Alvo</text>
+
+  <text x="620" y="1338" font-family="Georgia, 'Times New Roman', serif" font-size="76" fill="#0C0C0C">Homens e mulheres</text>
+  <text x="700" y="1415" font-family="Georgia, 'Times New Roman', serif" font-size="68" fill="#0C0C0C">30 a 55 anos</text>
+
+  <rect x="150" y="1460" width="210" height="80" fill="#C8AB45"/>
+  <rect x="360" y="1460" width="210" height="80" fill="#C30608"/>
+  <rect x="570" y="1460" width="210" height="80" fill="#D9A56A"/>
+  <rect x="780" y="1460" width="210" height="80" fill="#0E4D34"/>
+</svg>

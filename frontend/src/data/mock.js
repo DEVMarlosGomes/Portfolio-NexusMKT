@@ -145,6 +145,33 @@ export const projects = [
     ],
     typography: "Quicksand + Lora",
     services: ["Rebranding", "Logo Design", "Identidade Visual", "Social Media"]
+  },
+  {
+    id: 7,
+    client: "Casa Aurelia",
+    category: "Identidade Visual",
+    year: "2026",
+    description: "Projeto de identidade visual para restaurante italiano premium, com foco em marca, embalagens e materiais de comunicacao para delivery e nova unidade.",
+    challenge: "Unificar elegancia italiana e reconhecimento de marca em multiplos pontos de contato, mantendo leitura forte em materiais impressos e digitais.",
+    solution: "Sistema visual com selo oval proprietario, paleta inspirada na bandeira italiana e direcao de arte aplicada em logo, persona, paleta e mockups de expansao.",
+    logo: "/cases/casa-aurelia-logo-badge.svg",
+    thumbnail: "/cases/casa-aurelia-delivery.svg",
+    images: [
+      "/cases/casa-aurelia-delivery.svg",
+      "/cases/casa-aurelia-persona.svg",
+      "/cases/casa-aurelia-logo-variacoes.svg",
+      "/cases/casa-aurelia-paleta.svg",
+      "/cases/casa-aurelia-nova-unidade.svg"
+    ],
+    colorPalette: [
+      { name: "Verde Italia", hex: "#0E4D34" },
+      { name: "Areia Toscana", hex: "#D9A56A" },
+      { name: "Vermelho Pomodoro", hex: "#C30608" },
+      { name: "Dourado Mostarda", hex: "#C8AB45" },
+      { name: "Gelo Neutro", hex: "#ECECEC" }
+    ],
+    typography: "Cormorant Garamond + Libre Baskerville",
+    services: ["Identidade Visual", "Branding", "Design de Embalagens", "Direcao de Arte", "Lancamento de Unidade"]
   }
 ];
 
