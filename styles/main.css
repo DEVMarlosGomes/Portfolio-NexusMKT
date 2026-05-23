@@ -297,6 +297,20 @@ nav {
   color: var(--text-secondary);
 }
 
+.hero-desc {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 500px;
+  line-height: 1.7;
+  margin-top: -24px;
+  margin-bottom: 32px;
+  opacity: 0;
+}
+
+.hero-animate-3b { animation-delay: 300ms; }
+
 .hero-actions {
   display: flex;
   gap: 12px;
@@ -400,11 +414,184 @@ nav {
 }
 
 .company-card {
-  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.company-card-top {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 40px;
   align-items: start;
+  padding: 36px;
+}
+
+/* ── CAROUSEL ──────────────────────── */
+.carousel-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.06);
+  margin: 0 36px;
+}
+
+.company-carousel {
+  padding: 24px 36px 32px;
+}
+
+.carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.carousel-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel-arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--text-primary);
+  font-size: 17px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.80);
+  padding: 0;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 0.90);
+  transform: scale(1.08);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.carousel-counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  min-width: 36px;
+  text-align: center;
+}
+
+.carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-alt);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+
+/* Imagens aparecem por completo sem corte */
+.slide-media {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+
+.carousel-slide:hover .slide-media {
+  transform: scale(1.02);
+}
+
+.slide-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.025);
+  pointer-events: none;
+}
+
+.slide-empty-icon {
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.12);
+}
+
+.slide-empty-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.c-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.14);
+  border: none;
+  cursor: none;
+  padding: 0;
+  transition: background 0.25s ease, width 0.25s ease, border-radius 0.25s ease;
+  flex-shrink: 0;
+}
+
+.c-dot.active {
+  background: var(--text-primary);
+  width: 18px;
+  border-radius: 3px;
 }
 
 .company-details { flex: 1; }
@@ -741,7 +928,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .company-card {
+  .company-card-top {
     grid-template-columns: 1fr;
     gap: 24px;
     padding: 28px;
@@ -752,6 +939,10 @@ footer {
     height: 200px;
     min-width: unset;
   }
+
+  .carousel-divider { margin: 0 24px; }
+  .company-carousel { padding: 20px 24px 28px; }
+  .carousel-viewport { aspect-ratio: 1 / 1; } /* quadrado no mobile — ideal para posts */
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);

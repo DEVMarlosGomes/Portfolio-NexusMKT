@@ -147,7 +147,72 @@
     });
   });
 
-  /* ── 8. COMPANY CARD HOVER IMAGE DEPTH ───── */
+  /* ── 8. CAROUSELS ────────────────────────── */
+  class Carousel {
+    constructor(el) {
+      this.el       = el;
+      this.track    = el.querySelector('.carousel-track');
+      this.slides   = Array.from(el.querySelectorAll('.carousel-slide'));
+      this.dots     = Array.from(el.querySelectorAll('.c-dot'));
+      this.counter  = el.querySelector('.carousel-counter');
+      this.prevBtn  = el.querySelector('.carousel-arrow.prev');
+      this.nextBtn  = el.querySelector('.carousel-arrow.next');
+      this.total    = this.slides.length;
+      this.current  = 0;
+      this.startX   = 0;
+
+      this._bind();
+      this._update();
+    }
+
+    _bind() {
+      this.prevBtn?.addEventListener('click', () => this.go(this.current - 1));
+      this.nextBtn?.addEventListener('click', () => this.go(this.current + 1));
+      this.dots.forEach(dot => {
+        dot.addEventListener('click', () => this.go(+dot.dataset.index));
+      });
+
+      /* Touch swipe */
+      this.track.addEventListener('touchstart', e => {
+        this.startX = e.touches[0].clientX;
+      }, { passive: true });
+      this.track.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - this.startX;
+        if (Math.abs(dx) > 40) this.go(dx < 0 ? this.current + 1 : this.current - 1);
+      }, { passive: true });
+
+      /* Mouse drag */
+      let dragStartX = 0, dragging = false;
+      this.track.addEventListener('mousedown', e => { dragStartX = e.clientX; dragging = true; });
+      window.addEventListener('mouseup', e => {
+        if (!dragging) return;
+        dragging = false;
+        const dx = e.clientX - dragStartX;
+        if (Math.abs(dx) > 40) this.go(dx < 0 ? this.current + 1 : this.current - 1);
+      });
+    }
+
+    go(index) {
+      const prev = this.slides[this.current]?.querySelector('video');
+      prev?.pause();
+
+      this.current = ((index % this.total) + this.total) % this.total;
+      this._update();
+
+      const next = this.slides[this.current]?.querySelector('video');
+      if (next) next.play().catch(() => {});
+    }
+
+    _update() {
+      this.track.style.transform = `translateX(-${this.current * 100}%)`;
+      this.dots.forEach((d, i) => d.classList.toggle('active', i === this.current));
+      if (this.counter) this.counter.textContent = `${this.current + 1} / ${this.total}`;
+    }
+  }
+
+  document.querySelectorAll('.company-carousel').forEach(el => new Carousel(el));
+
+  /* ── 9. COMPANY CARD HOVER IMAGE DEPTH ───── */
   document.querySelectorAll('.company-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
