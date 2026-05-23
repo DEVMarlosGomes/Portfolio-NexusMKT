@@ -11,7 +11,11 @@
       "Bash(node -e ' *)",
       "Bash(find /c/Users/MARLOS -name \"*.jpg\" -o -name \"*.png\" -o -name \"*.jpeg\" 2>/dev/null | grep -i -E \"cavalcante|corretora|seguros|logo\" | head -10)",
       "Read(//c/Users/MARLOS/**)",
-      "PowerShell(Rename-Item \"c:\\\\Users\\\\MARLOS\\\\Desktop\\\\Portfolio-NexusMKT\\\\assets\\\\logos empresas\" \"logos-empresas\")"
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\MARLOS\\\\Desktop\\\\Portfolio-NexusMKT\\\\assets\\\\logos empresas\" \"logos-empresas\")",
+      "PowerShell(Copy-Item -Recurse -Force \"c:\\\\Users\\\\MARLOS\\\\Desktop\\\\Portfolio-NexusMKT\\\\styles\" \"c:\\\\Users\\\\MARLOS\\\\Desktop\\\\Portfolio-NexusMKT\\\\frontend\\\\public\\\\styles\")",
+      "PowerShell(Copy-Item -Recurse -Force \"c:\\\\Users\\\\MARLOS\\\\Desktop\\\\Portfolio-NexusMKT\\\\scripts\" \"c:\\\\Users\\\\MARLOS\\\\Desktop\\\\Portfolio-NexusMKT\\\\frontend\\\\public\\\\scripts\")",
+      "PowerShell(Copy-Item -Recurse -Force \"c:\\\\Users\\\\MARLOS\\\\Desktop\\\\Portfolio-NexusMKT\\\\assets\" \"c:\\\\Users\\\\MARLOS\\\\Desktop\\\\Portfolio-NexusMKT\\\\frontend\\\\public\\\\assets\")",
+      "PowerShell(Copy-Item \"c:\\\\Users\\\\MARLOS\\\\Desktop\\\\Portfolio-NexusMKT\\\\frontend\\\\public\\\\index.html\" \"c:\\\\Users\\\\MARLOS\\\\Desktop\\\\Portfolio-NexusMKT\\\\index.html\")"
     ]
   }
 }

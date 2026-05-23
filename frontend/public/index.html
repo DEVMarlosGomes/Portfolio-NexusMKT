@@ -1,168 +1,694 @@
-<!doctype html>
-<html lang="PT-BR">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="A product of emergent.sh" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
-       
-        <title>Nexus Marketing</title>
-       <!-- <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-        
-        These two scripts have been added for the Visual Edits, please do not edit or remove them
-        
-        <script>
-            // Only load visual edit scripts when inside an iframe
-            if (window.self !== window.top) {
-                // Load debug monitor script
-                var debugMonitorScript = document.createElement('script');
-                debugMonitorScript.src = 'https://assets.emergent.sh/scripts/debug-monitor.js';
-                document.head.appendChild(debugMonitorScript);
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio — — Social Media & Brand Manager Sistemas de alta escala, AI e LLM." />
+  <title>Portfólio Julia Cavalcante</title>
 
-                // Configure Tailwind
-                window.tailwind = window.tailwind || {};
-                tailwind.config = {
-                    corePlugins: { preflight: false },
-                }; 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Instrument+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
 
-                // Load Tailwind CDN
-                var tailwindScript = document.createElement('script');
-                tailwindScript.src = 'https://cdn.tailwindcss.com';
-                document.head.appendChild(tailwindScript);
-            } 
-        -->
-        </script>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-        <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/liquidglass.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+<body>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- Noise texture -->
+  <div class="noise-overlay" aria-hidden="true"></div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    
-        <a
-            id="emergent-badge"
-            target="_blank"
-            href="https://app.emergent.sh/?utm_source=emergent-badge"
-            style="
-                display: inline-flex !important;
-                box-sizing: border-box;
-                width: 178px;
-                height: 40px;
-                padding: 8px 12px 8px 12px;
-                align-items: center !important;
-                gap: 8px;
-                border-radius: 50px !important;
-                background: #000 !important;
-                position: fixed !important;
-                bottom: 20px;
-                right: 20px;
-                text-decoration: none;
-                font-family: -apple-system, BlinkMacSystemFont,
-                    &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell,
-                    &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
-                    sans-serif !important;
-                font-size: 12px !important;
-                z-index: 9999 !important;
-            "
-        >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M15.5702 8.13142C15.7729 8.0412 16.0007 8.18878 15.9892 8.4103C15.8374 11.3192 14.0965 14.0405 11.2531 15.3065C8.40964 16.5725 5.2224 16.0453 2.95912 14.2117C2.78676 14.072 2.82955 13.804 3.03219 13.7137L4.95677 12.8568C5.04866 12.8159 5.15446 12.823 5.24204 12.8725C6.73377 13.7153 8.59176 13.8649 10.2772 13.1145C11.9626 12.3641 13.0947 10.8833 13.4665 9.21075C13.4883 9.11256 13.5539 9.02918 13.6457 8.98827L15.5702 8.13142Z" fill="white"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3066 4.74698L15.5067 5.19653C15.5759 5.35178 15.5061 5.53366 15.3508 5.60278L1.29992 11.8586C1.14467 11.9278 0.962794 11.8579 0.893675 11.7027L0.701732 11.2716L0.693457 11.2531C-1.10317 7.21778 0.711626 2.49007 4.74692 0.693443C8.78221 -1.10318 13.51 0.711693 15.3066 4.74698ZM2.82356 8.55367C2.63552 8.63739 2.41991 8.51617 2.40853 8.31065C2.28373 6.05724 3.53858 3.85787 5.72286 2.88536C7.90715 1.91286 10.3813 2.45199 11.9724 4.05256C12.1175 4.19854 12.0633 4.43988 11.8753 4.5236L2.82356 8.55367Z" fill="white"/>
-            </svg>
-            <p
-                style="
-                    color: #FFF !important;
-                    font-family: 'Inter', sans-serif !important;
-                    font-size: 13px !important;
-                    font-style: normal !important;
-                    font-weight: 600 !important;
-                    line-height: 20px !important;
-                    margin: 0 !important;
-                    white-space: nowrap !important;
-                "
-            >
-                Made with Emergent
+  <!-- Custom cursor -->
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav class="nav-animate" role="navigation" aria-label="Principal">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">J C</a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#experiences">Experiências</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#contact" class="nav-cta">Contato</a></li>
+        </ul>
+
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span class="ham-line ham-line-1"></span>
+          <span class="ham-line ham-line-2"></span>
+          <span class="ham-line ham-line-3"></span>
+        </button>
+      </div>
+
+      <nav class="mobile-menu" aria-label="Mobile">
+        <a href="#about">Sobre</a>
+        <a href="#experiences">Experiências</a>
+        <a href="#skills">Skills</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contato</a>
+      </nav>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section id="hero" class="section">
+    <!-- Background orbs -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <!-- Badge -->
+        <div class="glass-pill hero-badge badge-available hero-animate hero-animate-1">
+          <span class="status-dot"></span>
+          Disponível para novos projetos
+        </div>
+
+        <!-- Name -->
+        <h1 class="hero-name hero-animate hero-animate-2">
+          <span>Julia</span>
+          <span>Cavalcante</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-subtitle hero-animate hero-animate-3">
+          Social Media &amp; Brand Manager
+        </p>
+
+        <!-- Description -->
+        <p class="hero-desc hero-animate hero-animate-3b">
+          Estratégias de crescimento, posicionamento de marca e automações inteligentes com IA para escala digital.
+        </p>
+
+        <!-- Role pills -->
+        <div class="hero-roles hero-animate hero-animate-4">
+          <span class="glass-pill role-pill">Social Media</span>
+          <span class="glass-pill role-pill">Brand Strategy</span>
+          <span class="glass-pill role-pill">IA &amp; Automação</span>
+        </div>
+
+        <!-- CTAs -->
+        <div class="hero-actions hero-animate hero-animate-5">
+          <a href="#experiences" class="btn-solid">Ver Projetos</a>
+          <a href="#contact"     class="btn-ghost">Contato</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Sobre mim</span>
+        <h2 class="section-title">Social Media que conecta<br>marca e audiência.</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Text -->
+        <div class="about-text reveal">
+          <p>
+            Combino estratégia de marca, marketing digital e social media com automação e posicionamento criativo — desde o planejamento de conteúdo até campanhas de alta performance. Tenho atuado no fortalecimento de marcas, gestão de redes sociais, liderança criativa de estratégias voltadas para engajamento, crescimento e autoridade digital.
+          </p>
+          <p>
+            Meu diferencial é entender a essência da marca antes de criar qualquer campanha: analiso posicionamento, comportamento do público e oportunidades de comunicação para construir estratégias que conectam, engajam e fortalecem a presença digital. Uno visão criativa, branding e execução estratégica para transformar ideias em resultados reais e marcas que se destacam.
+          </p>
+        </div>
+
+        <!-- Info cards -->
+        <div class="about-cards reveal-group">
+
+          <div class="glass about-card reveal">
+            <div>
+              <div class="about-card-label">Status</div>
+              <div class="about-card-value" style="display:flex;align-items:center;gap:8px;">
+                <span class="status-dot"></span> Disponível
+              </div>
+            </div>
+            <span class="about-card-icon">◎</span>
+          </div>
+
+          <div class="glass about-card reveal">
+            <div>
+              <div class="about-card-label">Localização</div>
+              <div class="about-card-value">Itaim Paulista - SP</div>
+            </div>
+            <span class="about-card-icon">◉</span>
+          </div>
+
+          <div class="glass about-card reveal">
+            <div>
+              <div class="about-card-label">Foco</div>
+              <div class="about-card-value">Brand Strategy &amp; Social Media</div>
+            </div>
+            <span class="about-card-icon">◈</span>
+          </div>
+
+          <div class="glass about-card reveal">
+            <div>
+              <div class="about-card-label">Idiomas</div>
+              <div class="about-card-value">Português</div>
+            </div>
+            <span class="about-card-icon">◇</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════
+       EXPERIENCES  ← SEÇÃO PRINCIPAL
+  ════════════════════════════════════════ -->
+  <section id="experiences" class="section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">Trajetória</span>
+        <h2 class="section-title">Experiências</h2>
+        <p class="section-subtitle">Empresas onde construí sistemas, liderança e impacto real.</p>
+      </div>
+
+      <div class="experiences-list reveal-group">
+
+        <!-- ── EMPRESA 1 ── -->
+        <article class="glass-lg company-card reveal">
+          <div class="company-card-top">
+          <div class="company-image-wrapper">
+            <img
+              src="assets/logos%20empresas/companie1.jpeg"
+              alt="[NOME_EMPRESA_1]"
+              class="company-logo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            />
+            <div class="company-placeholder" style="display:none;">LC</div>
+          </div>
+
+          <div class="company-details">
+            <h3 class="company-name">L Cavalcante Corretora de Seguros</h3>
+            <p class="company-role">Brand Manager & Auxiliar de Seguros</p>
+
+            <div class="company-meta">
+              <span class="glass-pill meta-pill">Ago 2023 – Presente</span>
+              <span class="glass-pill meta-pill">CLT</span>
+            </div>
+
+            <p class="company-desc">
+              Atuação em seguros com foco em Ramos Elementares, relacionamento com clientes e desenvolvimento de soluções personalizadas. Responsável pelo atendimento estratégico, suporte comercial e fortalecimento da experiência do cliente. Também atuo como Brand Manager e Social Media da empresa, desenvolvendo conteúdos, estratégias de comunicação e posicionamento da marca no ambiente digital.
+
             </p>
-        </a>
-        <script>
-            !(function (t, e) {
-                var o, n, p, r;
-                e.__SV ||
-                    ((window.posthog = e),
-                    (e._i = []),
-                    (e.init = function (i, s, a) {
-                        function g(t, e) {
-                            var o = e.split(".");
-                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
-                                (t[e] = function () {
-                                    t.push(
-                                        [e].concat(
-                                            Array.prototype.slice.call(
-                                                arguments,
-                                                0,
-                                            ),
-                                        ),
-                                    );
-                                });
-                        }
-                        ((p = t.createElement("script")).type =
-                            "text/javascript"),
-                            (p.crossOrigin = "anonymous"),
-                            (p.async = !0),
-                            (p.src =
-                                s.api_host.replace(
-                                    ".i.posthog.com",
-                                    "-assets.i.posthog.com",
-                                ) + "/static/array.js"),
-                            (r =
-                                t.getElementsByTagName(
-                                    "script",
-                                )[0]).parentNode.insertBefore(p, r);
-                        var u = e;
-                        for (
-                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
-                                u.people = u.people || [],
-                                u.toString = function (t) {
-                                    var e = "posthog";
-                                    return (
-                                        "posthog" !== a && (e += "." + a),
-                                        t || (e += " (stub)"),
-                                        e
-                                    );
-                                },
-                                u.people.toString = function () {
-                                    return u.toString(1) + ".people (stub)";
-                                },
-                                o =
-                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
-                                        " ",
-                                    ),
-                                n = 0;
-                            n < o.length;
-                            n++
-                        )
-                            g(u, o[n]);
-                        e._i.push([i, s, a]);
-                    }),
-                    (e.__SV = 1));
-            })(document, window.posthog || []);
-            posthog.init("phc_xAvL2Iq4tFmANRE7kzbKwaSqp1HJjN7x48s3vr0CMjs", {
-                api_host: "https://us.i.posthog.com",
-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
-                session_recording: {
-                    recordCrossOriginIframes: true,
-                },
-            });-->
-        </script>
-    </body>
+
+            <div class="company-skills">
+              <span class="tech-tag">Canva</span>
+              <span class="tech-tag">CapCut</span>
+              <span class="tech-tag">Illustrator</span>
+              <span class="tech-tag">Photoshop</span>
+              <span class="tech-tag">Adobe Premiere</span>
+            </div>
+          </div>
+        </div>
+          <div class="carousel-divider"></div>
+          <div class="company-carousel">
+            <div class="carousel-header">
+              <span class="carousel-label">Materiais produzidos</span>
+              <div class="carousel-controls">
+                <button class="carousel-arrow prev" aria-label="Anterior">&#8249;</button>
+                <span class="carousel-counter">1 / 4</span>
+                <button class="carousel-arrow next" aria-label="Proximo">&#8250;</button>
+              </div>
+            </div>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="assets/carousel/empresa-1/fotoone.jpeg" alt="Material 1" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-1.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-1/fototwo.jpeg" alt="Material 2" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-2.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-1/fotothree.jpeg" alt="Material 3" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-3.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-1/fotofour.jpeg" alt="Material 4" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-4.jpg</span></div></div>
+              </div>
+            </div>
+            <div class="carousel-dots">
+              <button class="c-dot active" data-index="0"></button><button class="c-dot" data-index="1"></button><button class="c-dot" data-index="2"></button><button class="c-dot" data-index="3"></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── EMPRESA 2 ── -->
+        <article class="glass-lg company-card reveal">
+          <div class="company-card-top">
+          <div class="company-image-wrapper">
+            <img
+              src="assets/logos%20empresas/companie2.jpeg"
+              alt="[NOME_EMPRESA_2]"
+              class="company-logo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            />
+            <div class="company-placeholder" style="display:none;">EC</div>
+          </div>
+
+          <div class="company-details">
+            <h3 class="company-name">ECAV - Escola Cristã Árvore da Vida</h3>
+            <p class="company-role">Social Media</p>
+
+            <div class="company-meta">
+              <span class="glass-pill meta-pill">Jun 2025 - Presente</span>
+              <span class="glass-pill meta-pill">Consultoria</span>
+            </div>
+
+            <p class="company-desc">
+              Desenvolvimento de estratégias de social media e posicionamento digital para fortalecimento da marca. Criação de conteúdos criativos, planejamento de campanhas e produção audiovisual voltada para engajamento e conexão com o público. Atuação como videomaker na captação, edição e direção de vídeos institucionais, promocionais e conteúdos para redes sociais, elevando a presença digital e a autoridade da empresa.
+
+            </p>
+
+            <div class="company-skills">
+              <span class="tech-tag">Canva</span>
+              <span class="tech-tag">CapCut</span>
+              <span class="tech-tag">Illustrator</span>
+              <span class="tech-tag">Photoshop</span>
+              <span class="tech-tag">Adobe Premiere</span>
+            </div>
+          </div>
+        </div>
+          <div class="carousel-divider"></div>
+          <div class="company-carousel">
+            <div class="carousel-header">
+              <span class="carousel-label">Materiais produzidos</span>
+              <div class="carousel-controls">
+                <button class="carousel-arrow prev" aria-label="Anterior">&#8249;</button>
+                <span class="carousel-counter">1 / 4</span>
+                <button class="carousel-arrow next" aria-label="Proximo">&#8250;</button>
+              </div>
+            </div>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="assets/carousel/empresa-2/primeiro.jpeg" alt="Material 1" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-1.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-2/segundo.png" alt="Material 2" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-2.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-2/terceiro.jpeg" alt="Material 3" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-3.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-2/ultimo.jpeg" alt="Material 4" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-4.jpg</span></div></div>
+              </div>
+            </div>
+            <div class="carousel-dots">
+              <button class="c-dot active" data-index="0"></button><button class="c-dot" data-index="1"></button><button class="c-dot" data-index="2"></button><button class="c-dot" data-index="3"></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── EMPRESA 3 ── -->
+        <article class="glass-lg company-card reveal">
+          <div class="company-card-top">
+          <div class="company-image-wrapper">
+            <img
+              src="assets/logos%20empresas/companie3.jpeg"
+              alt="[NOME_EMPRESA_3]"
+              class="company-logo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            />
+            <div class="company-placeholder" style="display:none;">AP</div>
+          </div>
+
+          <div class="company-details">
+            <h3 class="company-name">Auto Escola Poá</h3>
+            <p class="company-role">Social Media</p>
+
+            <div class="company-meta">
+              <span class="glass-pill meta-pill">Jan 2025 – Mar 2026</span>
+              <span class="glass-pill meta-pill">PJ</span>
+            </div>
+
+            <p class="company-desc">
+              Gestão de social media e fortalecimento da presença digital da Auto Escola Poá. Desenvolvimento de conteúdos estratégicos para redes sociais, criação de campanhas de engajamento e produção de materiais visuais voltados para captação de alunos e posicionamento da marca. Atuação no planejamento criativo, identidade digital e comunicação da empresa, aumentando o alcance e a conexão com o público.
+
+            </p>
+
+            <div class="company-skills">
+              <span class="tech-tag">Canva</span>
+              <span class="tech-tag">Capcut</span>
+              <span class="tech-tag">Illustrator</span>
+            </div>
+          </div>
+        </div>
+          <div class="carousel-divider"></div>
+          <div class="company-carousel">
+            <div class="carousel-header">
+              <span class="carousel-label">Materiais produzidos</span>
+              <div class="carousel-controls">
+                <button class="carousel-arrow prev" aria-label="Anterior">&#8249;</button>
+                <span class="carousel-counter">1 / 4</span>
+                <button class="carousel-arrow next" aria-label="Proximo">&#8250;</button>
+              </div>
+            </div>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="assets/carousel/empresa-3/post1.png" alt="Material 1" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-1.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-3/post2.png" alt="Material 2" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-2.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-3/post3.jpeg" alt="Material 3" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-3.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-3/post4.png" alt="Material 3" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-3.jpg</span></div></div>
+              </div>
+            </div>
+            <div class="carousel-dots">
+              <button class="c-dot active" data-index="0"></button><button class="c-dot" data-index="1"></button><button class="c-dot" data-index="2"></button><button class="c-dot" data-index="3"></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── EMPRESA 4 ── -->
+        <article class="glass-lg company-card reveal">
+          <div class="company-card-top">
+          <div class="company-image-wrapper">
+            <img
+              src="assets/logos%20empresas/companie4.png"
+              alt="[NOME_EMPRESA_4]"
+              class="company-logo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            />
+            <div class="company-placeholder" style="display:none;">GC</div>
+          </div>
+
+          <div class="company-details">
+            <h3 class="company-name">Gold Coffe</h3>
+            <p class="company-role">Brand Manager & Social Media Specialist</p>
+
+            <div class="company-meta">
+              <span class="glass-pill meta-pill">Planejamento de nova empresa</span>
+              <span class="glass-pill meta-pill">Consultoria</span>
+            </div>
+
+            <p class="company-desc">
+              Idealizadora da Gold Coffe, uma marca criada com foco em oferecer uma experiência premium em cafeteria, unindo identidade sofisticada, ambiente acolhedor e produtos de alta qualidade. Responsável pelo desenvolvimento do conceito da marca, posicionamento, identidade visual e estratégias de branding voltadas para criar conexão, exclusividade e experiência diferenciada ao público.
+            </p>
+
+            <div class="company-skills">
+              <span class="tech-tag">Gemini</span>
+              <span class="tech-tag">Capcut</span>
+              <span class="tech-tag">Canva</span>
+              <span class="tech-tag">Premiere</span>
+              <span class="tech-tag">Illustrator</span>
+            </div>
+          </div>
+        </div>
+          <div class="carousel-divider"></div>
+          <div class="company-carousel">
+            <div class="carousel-header">
+              <span class="carousel-label">Materiais produzidos</span>
+              <div class="carousel-controls">
+                <button class="carousel-arrow prev" aria-label="Anterior">&#8249;</button>
+                <span class="carousel-counter">1 / 4</span>
+                <button class="carousel-arrow next" aria-label="Proximo">&#8250;</button>
+              </div>
+            </div>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <div class="carousel-slide"><img src="assets/carousel/empresa-4/one.png" alt="Material 1" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-1.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-4/two.png" alt="Material 2" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-2.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-4/tree.png" alt="Material 3" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-3.jpg</span></div></div>
+                <div class="carousel-slide"><img src="assets/carousel/empresa-4/four.png" alt="Material 3" class="slide-media" onerror="this.style.display='none'" /><div class="slide-empty"><span class="slide-empty-icon">+</span><span class="slide-empty-text">slide-3.jpg</span></div></div>
+              </div>
+            </div>
+            <div class="carousel-dots">
+              <button class="c-dot active" data-index="0"></button><button class="c-dot" data-index="1"></button><button class="c-dot" data-index="2"></button><button class="c-dot" data-index="3"></button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════
+       SKILLS
+  ════════════════════════════════════════ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">Competências</span>
+        <h2 class="section-title">Habilidades</h2>
+      </div>
+
+      <div class="skills-grid reveal-group">
+
+        <div class="glass-sm skill-card reveal">
+          <span class="skill-icon">◈</span>
+          <div class="skill-name">Social Media</div>
+          <p class="skill-desc">Estratégias de marketing, branding e social media com foco em posicionamento, engajamento e fortalecimento de marca.
+</p>
+          <div class="skill-tags">
+            <span class="tech-tag">Illustrator</span>
+            <span class="tech-tag">Capcut</span>
+            <span class="tech-tag">Canva</span>
+          </div>
+        </div>
+
+        <div class="glass-sm skill-card reveal">
+          <span class="skill-icon">◎</span>
+          <div class="skill-name">Designer</div>
+          <p class="skill-desc">Design gráfico, identidade visual e criação de peças digitais com foco em branding e comunicação visual.
+</p>
+          <div class="skill-tags">
+            <span class="tech-tag">Photoshop</span>
+            <span class="tech-tag">LightRoom</span>
+            <span class="tech-tag">Creative Cloud</span>
+          </div>
+        </div>
+
+        <div class="glass-sm skill-card reveal">
+          <span class="skill-icon">◉</span>
+          <div class="skill-name">Video Maker</div>
+          <p class="skill-desc">Do roteiro à edição: captação, direção, montagem e finalização de vídeos criativos para marcas e redes sociais.</p>
+          <div class="skill-tags">
+            <span class="tech-tag">Adobe Premiere</span>
+            <span class="tech-tag">Capcut</span>
+            <span class="tech-tag">Canva</span>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════
+       TECH STACK
+  ════════════════════════════════════════ -->
+  <section id="stack" class="section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">Ferramentas</span>
+        <h2 class="section-title">Stack tecnológico</h2>
+      </div>
+
+      <div class="glass-lg stack-card reveal">
+        <div class="stack-groups">
+
+          <!-- AI  -->
+          <div>
+            <div class="stack-group-title">AI</div>
+            <div class="stack-items">
+              <div class="stack-item"><span class="stack-dot dark"></span><span class="stack-item-name">Claude (Anthropic)</span></div>
+              <div class="stack-item"><span class="stack-dot dark"></span><span class="stack-item-name">GPT-5 / OpenAI</span></div>
+              <div class="stack-item"><span class="stack-dot mid"></span><span class="stack-item-name">Gemini</span></div>
+              <div class="stack-item"><span class="stack-dot mid"></span><span class="stack-item-name">BlackBox</span></div>
+              <div class="stack-item"><span class="stack-dot mid"></span><span class="stack-item-name">Perplexity</span></div>
+              <div class="stack-item"><span class="stack-dot light"></span><span class="stack-item-name">MetaAI</span></div>
+            </div>
+          </div>
+
+          <!-- Edição de Imagem -->
+          <div>
+            <div class="stack-group-title">Edição de Imagem</div>
+            <div class="stack-items">
+              <div class="stack-item"><span class="stack-dot dark"></span><span class="stack-item-name">Canva</span></div>
+              <div class="stack-item"><span class="stack-dot dark"></span><span class="stack-item-name">LightRoom</span></div>
+              <div class="stack-item"><span class="stack-dot mid"></span><span class="stack-item-name">Illustrator</span></div>
+              <div class="stack-item"><span class="stack-dot mid"></span><span class="stack-item-name">Photoshop</span></div>
+              <div class="stack-item"><span class="stack-dot light"></span><span class="stack-item-name">Figma</span></div>
+            </div>
+          </div>
+
+          <!-- Edição de Video -->
+          <div>
+            <div class="stack-group-title">Edição de Video</div>
+            <div class="stack-items">
+              <div class="stack-item"><span class="stack-dot dark"></span><span class="stack-item-name">Adobe Premiere</span></div>
+              <div class="stack-item"><span class="stack-dot dark"></span><span class="stack-item-name">Capcut</span></div>
+              <div class="stack-item"><span class="stack-dot mid"></span><span class="stack-item-name">Sony Vegas</span></div>
+              <div class="stack-item"><span class="stack-dot mid"></span><span class="stack-item-name">Canva</span></div>
+              <div class="stack-item"><span class="stack-dot mid"></span><span class="stack-item-name">Filmora</span></div>
+              <div class="stack-item"><span class="stack-dot light"></span><span class="stack-item-name">Rush</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════
+       PROCESS
+  ════════════════════════════════════════ -->
+  <section id="process" class="section section-alt">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">Como trabalho</span>
+        <h2 class="section-title">Processo</h2>
+      </div>
+
+      <div class="process-grid reveal-group">
+
+        <div class="glass-sm process-card reveal">
+          <div class="step-number">01</div>
+          <div class="process-name">Estratégia</div>
+          <p class="process-desc">Entendo a essência da marca, o público e os objetivos para criar uma comunicação forte, autêntica e alinhada ao posicionamento da empresa.</p>
+        </div>
+
+        <div class="glass-sm process-card reveal">
+          <div class="step-number">02</div>
+          <div class="process-name">Planejamento</div>
+          <p class="process-desc">Desenvolvo o calendário de conteúdo, campanhas e direcionamento criativo para manter consistência, relevância e presença digital.</p>
+        </div>
+
+        <div class="glass-sm process-card reveal">
+          <div class="step-number">03</div>
+          <div class="process-name">Criação & Conteúdo</div>
+          <p class="process-desc">Produzo conteúdos visuais, vídeos e materiais estratégicos focados em engajamento, autoridade e conexão com a audiência.</p>
+        </div>
+
+        <div class="glass-sm process-card reveal">
+          <div class="step-number">04</div>
+          <div class="process-name">Crescimento & Gestão</div>
+          <p class="process-desc">Acompanho métricas, otimizo resultados e fortaleço a marca através de análises, tendências e estratégias contínuas de social media.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════
+       TESTIMONIALS
+  ════════════════════════════════════════ -->
+  <section id="testimonials" class="section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">Referências</span>
+        <h2 class="section-title">Depoimentos</h2>
+      </div>
+
+      <div class="testimonials-grid reveal-group">
+
+        <div class="glass testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Trabalhar com a Julia trouxe uma nova identidade para a LCavalcante. Ela conseguiu transformar nossa comunicação em algo mais moderno, profissional e conectado com o público. Hoje nossa marca transmite muito mais autoridade e presença digital."
+          </p>
+          <div class="testimonial-author">
+            <div class="avatar-circle">LC</div>
+            <div class="author-info">
+              <div class="author-name">Lincoln Cavalcante</div>
+              <div class="author-role">CEO · LCavalcante Corretora</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "O trabalho desenvolvido nas redes sociais da ECAV elevou nosso alcance e engajamento de forma impressionante. Criatividade, constância e estratégia fizeram toda diferença no fortalecimento da nossa marca e na aproximação com novos alunos."
+          </p>
+          <div class="testimonial-author">
+            <div class="avatar-circle">LC</div>
+            <div class="author-info">
+              <div class="author-name">Liliana Cavalcante</div>
+              <div class="author-role">CEO · ECAV</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Além de conteúdos criativos e profissionais, a Julia entende como conectar a marca com as pessoas. Nossa presença nas redes sociais ficou mais forte, mais atual e muito mais atrativa para o público."
+          </p>
+          <div class="testimonial-author">
+            <div class="avatar-circle">RR</div>
+            <div class="author-info">
+              <div class="author-name">Ricardo Rosa</div>
+              <div class="author-role">CEO · Auto Escola Poá</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════
+       CTA FINAL
+  ════════════════════════════════════════ -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="glass-lg cta-card reveal">
+        <h2 class="cta-title">Vamos construir<br>algo que escala.</h2>
+        <p class="cta-subtitle">
+          Disponível para projetos de marketing, branding e social media.
+          Estratégias criativas, posicionamento de marca e gestão de conteúdo com foco em resultado.
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:juliademelo506@gmail.com" class="btn-solid">Enviar mensagem</a>
+          <a href="https://wa.me/5511959400022" target="_blank" rel="noopener" class="btn-solid">WhatsApp</a>
+          <a href="https://linkedin.com/in/julia-de-melo-cavalcante-rodrigues-974466282/" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo">JC</a>
+        <p class="footer-copy">© 2026 JULIA CAVALCANTE — Todos os direitos reservados.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/julia-de-melo-cavalcante-rodrigues-974466282/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./scripts/main.js"></script>
+</body>
 </html>
